@@ -10,7 +10,7 @@ on:
 
 jobs:
   build-and-deploy:
-    runs-on: windows-latest
+    runs-on: ubuntu-latest
 
     steps:
     # checkout the repo
@@ -31,6 +31,6 @@ jobs:
       with:
         app-name: lel-eureka-server
         slot-name: Production
-        publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_04CD7C9EA39740A4AB7A3012FB0B66FD }}
+        publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_9875E55270E84855BFFA06CA650BC414 }}
         package: ${{ github.workspace }}/target/*.jar
 
